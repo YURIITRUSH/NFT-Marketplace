@@ -290,6 +290,14 @@ body {
 .card__body {
   border-radius: 35.0246px;
   background-color: #1F1D2B;
+  -webkit-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.card__body:hover {
+  margin-top: -15px;
 }
 
 .card__img {
@@ -365,6 +373,14 @@ body {
 
 .item__body {
   border-radius: 31.2016px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.item__body:hover {
+  margin-top: -10px;
 }
 
 .item__img img {
@@ -439,6 +455,68 @@ body {
 
 ._icon-verfied:before {
   color: #00ACE8;
+}
+
+.header-link {
+  position: relative;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 3px;
+  background-color: #5B68DF;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.header-link:hover {
+  color: #5B68DF;
+}
+
+.header-link:hover::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header__btn,
+.btn-nft {
+  -webkit-transition: -webkit-box-shadow 0.4s ease;
+  transition: -webkit-box-shadow 0.4s ease;
+  -o-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+}
+
+.header__btn:hover,
+.btn-nft:hover {
+  -webkit-box-shadow: 2px 1000px 1px #5B68DF inset;
+          box-shadow: 2px 1000px 1px #5B68DF inset;
+}
+
+.discover__btn {
+  -webkit-transition: -webkit-box-shadow 0.4s ease;
+  transition: -webkit-box-shadow 0.4s ease;
+  -o-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+}
+
+.discover__btn:hover {
+  -webkit-box-shadow: 2px 1000px 1px #5B68DF inset;
+          box-shadow: 2px 1000px 1px #5B68DF inset;
 }
 
 .header {
@@ -589,6 +667,10 @@ body {
   padding-left: 24px;
   font-weight: 200;
   color: #fff;
+}
+
+.search__input:focus {
+  outline: none;
 }
 
 .search__input::-webkit-input-placeholder {
